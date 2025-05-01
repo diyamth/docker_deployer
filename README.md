@@ -31,7 +31,6 @@ docker_deployer/
 │
 ├── models/                  # Data models (probably Pydantic or DB models)
 │
-├── tests/                   # Unit tests
 │
 ├── requirements.txt         # Dependencies
 └── venv/                    # Virtual environment (can be ignored)
