@@ -1,4 +1,4 @@
-# Deployer App
+# Docker Deployer App
 
 A Python-based application for managing deployments and container operations using Docker. It provides an API interface to handle deployment processes, container lifecycle operations, and abstracts Docker logic for easier integration and testing.
 
@@ -15,27 +15,66 @@ A Python-based application for managing deployments and container operations usi
 ---
 
 ## 🗂️ Project Structure
+```
+docker_deployer/
+│
+├── app/                     # Main application logic
+│   ├── main.py              # Application entry point
+│   └── api/                 # API endpoints for deployment and container operations
+│       ├── container_ops.py
+│       └── deploy.py
+│
+├── utils/                   # Utility modules
+│   └── docker_client.py     # Docker client abstraction
+│
+├── services/                # Likely for internal service logic (to check further)
+│
+├── models/                  # Data models (probably Pydantic or DB models)
+│
+├── tests/                   # Unit tests
+│
+├── requirements.txt         # Dependencies
+└── venv/                    # Virtual environment (can be ignored)
 
-deployer_app/ ├── app/ │ ├── main.py # FastAPI application entry point │ └── api/ │ ├── container_ops.py # Container management endpoints │ └── deploy.py # Deployment-related logic ├── utils/ │ └── docker_client.py # Docker SDK wrapper ├── services/ # Internal service logic (TBD) ├── models/ # Pydantic/DB models ├── tests/ # Unit tests ├── requirements.txt # Dependencies └── venv/ # Virtual environment (excluded from Git)
+```
 
 
 ---
 
-## 🚀 Features
-
-- 🔌 **FAST API** to manage Docker containers
-- 🐳 Start, stop, and list containers
-- 🔐 SSH-based deployment integration
-- ♻️ Modular, maintainable structure using FastAPI and Docker SDK
-
----
-
-## ⚙️ Setup & Installation
+##  Setup & Installation
 
 ### 1. Clone the Repository
 
 ```bash
-git clone git@github.com:your-username/deployer_app.git
-cd deployer_app
+git clone git@github.com:your-username/docker_deployer.git
+cd docker_deployer
+```
+
+### 2. Create and Activate a Virtual Environment 
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Ensure Docker is Installed and Running
+
+```bash
+Installed → Get Docker
+Running (use docker ps to verify)
+```
+
+### 5. Run the FastAPI Server
+
+```bash
+uvicorn app.main:app --reload
+```
+
 
 
