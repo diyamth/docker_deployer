@@ -7,9 +7,9 @@ router = APIRouter()
 
 # Create an instance of DockerDeployer to manage container operations remotely
 deployer = DockerDeployer(
-    hostname=os.getenv("SSH_HOSTNAME", "localhost"),
-    username=os.getenv("SSH_USERNAME", "hawk-ai"),
-    private_key_path=os.getenv("PRIVATE_KEY_PATH", "/home/hawk-ai/.ssh/id_rsa")
+    hostname=os.getenv("SSH_HOSTNAME"),
+    username=os.getenv("SSH_USERNAME"),
+    private_key_path=os.getenv("PRIVATE_KEY_PATH")
 )
 
 @router.post("/deploy")
