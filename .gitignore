@@ -1,0 +1,46 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables and secrets
+.env
+*.pem
+*.key
+*.crt
+
+# Virtual environments
+venv/
+.env/
+
+# Dependency folders (if using JS tools or frontend build tools)
+node_modules/
+
+# macOS system files
+.DS_Store
+
+# VSCode settings
+.vscode/
+
+# PyInstaller
+*.spec
+dist/
+build/
+
+# Logs
+*.log
+
+# Database files
+*.sqlite3
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Test coverage
+htmlcov/
+.coverage
+coverage.xml
+.cache/
+nosetests.xml
+pytest_cache/
+
