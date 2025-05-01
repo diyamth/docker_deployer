@@ -5,9 +5,9 @@ from services.validators import InputValidator
 class DockerDeployer:
     def __init__(self, hostname: str, username: str, private_key_path: str):
         # SSH connection parameters
-        self.hostname = os.getenv("SSH_HOSTNAME", "localhost")
-        self.username = os.getenv("SSH_USERNAME", "hawk-ai")
-        self.private_key_path = os.getenv("PRIVATE_KEY_PATH", "/home/hawk-ai/.ssh/id_rsa")
+        self.hostname = os.getenv("SSH_HOSTNAME")
+        self.username = os.getenv("SSH_USERNAME")
+        self.private_key_path = os.getenv("PRIVATE_KEY_PATH")
 
         # SSH connection handle
         self.connection: Optional[asyncssh.SSHClientConnection] = None
